@@ -1,5 +1,10 @@
 // Example: apps/user-app/pages/index.tsx
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
       {/* Navbar starts */}
@@ -12,10 +17,16 @@ export default function Home() {
           <div className="mx-4 text-[#777777] text-sm">About</div>
         </div>
         <div>
-          <button className="mx-2 border border-[#777777] rounded-full px-4 py-2 text-sm text-[#777777]">
+          <button
+            onClick={() => router.push("/signin")}
+            className="mx-2 border border-[#777777] rounded-full px-4 py-2 text-sm text-[#777777]"
+          >
             Log In
           </button>
-          <button className="mx-2 rounded-full px-4 py-2 text-sm text-white bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD]">
+          <button
+            onClick={() => router.push("/signup")}
+            className="mx-2 rounded-full px-4 py-2 text-sm text-white bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD]"
+          >
             Sign Up
           </button>
         </div>
@@ -34,7 +45,10 @@ export default function Home() {
             stress-free tomorrow!
           </div>
           <div className="text-center">
-            <button className="mx-2 rounded-full px-4 py-2 text-sm text-white bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD]">
+            <button
+              onClick={() => router.push("/signup")}
+              className="mx-2 rounded-full px-4 py-2 text-sm text-white bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD]"
+            >
               Take Control Now
             </button>
           </div>
