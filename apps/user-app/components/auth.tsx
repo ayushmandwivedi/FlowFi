@@ -1,8 +1,8 @@
-export const Auth = ({ props }: { props: "signin" | "signup" }) => {
+export const Auth = ({ type }: { type: "signin" | "signup" }) => {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+    <div className="w-full min-h-screen flex justify-center items-center">
       <div className="w-2/5 flex flex-col items-center justify-center gap-8 p-10 rounded-2xl border-2 border-[#dad5d5] ">
-        {props === "signup" ? (
+        {type === "signup" ? (
           <div className="text-4xl font-semibold">Create an Account</div>
         ) : (
           <div className="text-4xl font-semibold">Signin to FlowFi</div>
@@ -14,9 +14,9 @@ export const Auth = ({ props }: { props: "signin" | "signup" }) => {
               viewBox="0 0 24 24"
               fill="white"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               {" "}
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -28,9 +28,9 @@ export const Auth = ({ props }: { props: "signin" | "signup" }) => {
               viewBox="0 0 24 24"
               fill="white"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               {" "}
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />{" "}
@@ -44,11 +44,11 @@ export const Auth = ({ props }: { props: "signin" | "signup" }) => {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              strokeWidth="2"
               stroke="currentColor"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               {" "}
               <path stroke="none" d="M0 0h24v24H0z" />{" "}
@@ -57,31 +57,40 @@ export const Auth = ({ props }: { props: "signin" | "signup" }) => {
           </span>
         </div>
         <div className="flex flex-col gap-3 w-full">
-          {props === "signup" ? (
+          {type === "signup" ? (
             <input
               placeholder="Name"
+              defaultValue=""
               type="text"
               className="bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD] text-sm px-6 py-3 rounded-xl outline-0 text-white"
             ></input>
           ) : null}
           <input
             placeholder="Email"
+            defaultValue=""
             type="email"
             className="bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD] text-sm px-6 py-3 rounded-xl outline-0 text-white"
           ></input>
           <input
             placeholder="Password"
+            defaultValue=""
             type="password"
             className="bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD] text-sm px-6 py-3 rounded-xl outline-0 text-white"
           ></input>
         </div>
         <div>
-          {props === "signup" ? (
-            <button className=" px-6 py-3 rounded-2xl bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD] text-sm text-white">
+          {type === "signup" ? (
+            <button
+              type="button"
+              className=" px-6 py-3 rounded-2xl bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD] text-sm text-white"
+            >
               SignUp
             </button>
           ) : (
-            <button className="px-6 py-3 rounded-2xl bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD] text-sm text-white">
+            <button
+              type="button"
+              className="px-6 py-3 rounded-2xl bg-gradient-to-r from-[#9C8EF7] to-[#E5B1FD] text-sm text-white"
+            >
               SignIn
             </button>
           )}

@@ -1,5 +1,5 @@
-import { Auth } from "@repo/ui/auth";
+import { Auth } from "../../components/auth";
 
 export default function Signup() {
-  return <Auth props="signup"></Auth>;
+  return <Auth type="signup"></Auth>;
 }
