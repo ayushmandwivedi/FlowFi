@@ -1,5 +1,11 @@
-import { Auth } from "../../../components/auth";
+import { Button } from "@/components/ui/button";
+import { Auth } from "../../../components/Auth";
 
 export default function Signup() {
-  return <Auth type="signup"></Auth>;
+  return (
+    <div>
+      <Auth type="signup"></Auth>
+      <Button>Hello there</Button>
+    </div>
+  );
 }

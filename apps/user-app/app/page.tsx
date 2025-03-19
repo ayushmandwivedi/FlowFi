@@ -57,7 +57,7 @@ export default function Home() {
         {/* Phone UI part starts */}
         <div className="bg-[linear-gradient(to_bottom,white,transparent),linear-gradient(to_right,#9C8EF7,#E5B1FD)] pt-12">
           {/* Phone's Screen */}
-          <div className=" w-65 rounded-t-4xl mx-auto border-6 border-b-0 bg-white relative">
+          <div className=" w-65 rounded-t-4xl mx-auto border-6 border-b-0 border-black bg-white relative">
             <div className="w-20 h-6 mx-auto my-2 bg-black rounded-full"></div>
             <div className="m-4 text-xl font-semibold">
               <span className="text-[#777777] font-normal">Hi Cartez,</span>
