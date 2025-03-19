@@ -1,6 +1,6 @@
-import { CashCard } from "components/CashCard";
-import { TransferCard } from "components/TransferCard";
-import WavyChart from "components/WavyChart";
+import { CashCard } from "components/dashboard/CashCard";
+import { TransferCard } from "components/dashboard/TransferCard";
+import WavyChart from "components/dashboard/WavyChart";
 
 export default function Dashboard() {
   return (
