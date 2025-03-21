@@ -11,7 +11,7 @@ import {
 
 export const Sidebar = () => {
   return (
-    <aside className="w-1/5 h-full p-6">
+    <aside className="w-1/5 p-6">
       <div className="flex justify-start items-center gap-2">
         <div>
           <svg
