@@ -10,9 +10,13 @@ import {
 } from "lucide-react";
 
 export const Sidebar = () => {
+  const router = useRouter();
   return (
     <aside className="w-1/5 p-6">
-      <div className="flex justify-start items-center gap-2">
+      <div
+        className="flex justify-start items-center gap-2 hover:bg-[#edecec] p-3 rounded-md"
+        onClick={() => router.push("/dashboard/account")}
+      >
         <div>
           <svg
             className="h-8 w-8 text-black"
